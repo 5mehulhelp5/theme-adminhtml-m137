@@ -24,8 +24,8 @@ bin/magento setup:upgrade
 Install the theme and the module locally
 
 ```
-git clone git@github.com:mage-os-lab/theme-adminhtml-m137.git ./app/design/adminhtml/MageOS/theme-adminhtml-m137/
-git clone git@github.com:mage-os-lab/module-theme-adminhtml-switcher.git ./app/code/MageOS/ThemeAdminhtmlSwitcher/
+git clone git@github.com:mage-os/theme-adminhtml-m137.git ./app/design/adminhtml/MageOS/theme-adminhtml-m137/
+git clone git@github.com:mage-os/module-theme-adminhtml-switcher.git ./app/code/MageOS/ThemeAdminhtmlSwitcher/
 ```
 
 ## Features

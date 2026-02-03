@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.3.3] - 2026-02-03
+
+### Changed
+
+- Replace `.gif` loaders with `.svg` ones
+
+### Added
+- Theme name as `class` attribute to `body` tag
+
 ## [1.3.2] - 2025-10-16
 
 ### Changed

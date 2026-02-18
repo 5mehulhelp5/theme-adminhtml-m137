@@ -9,8 +9,8 @@
 //  _____________________________________________
 
 .abs-actions-split-xl {
-    @_dropdown__padding-right: 4rem;
-    @_action-toggle__width: @_dropdown__padding-right;
+    @_dropdown__padding-right: 5rem;
+    @_action-toggle__width: (@_dropdown__padding-right + 0.2rem);
     @_triangle__height: @button-marker-triangle__height__xl;
     @_triangle__right: (@_dropdown__padding-right / 2) - (@_triangle__width / 2);
     @_triangle__width: @button-marker-triangle__width__xl;
@@ -36,15 +36,33 @@
 
 //  Double button action
 .actions-split {
+    .action-default,
+    .action-toggle {
+        transition: @smooth__border-radius;
+    }
+
     .action-default {
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
+        border-bottom-right-radius: @indent__s;
+        border-top-right-radius: @indent__s;
+
+        &:hover {
+            border-bottom-right-radius: @radius__base;
+            border-top-right-radius: @radius__base;
+        }
     }
 
     .action-toggle {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-        border-left-width: 2px;
-        border-left-color: @button-primary__hover__border-color;
+        border-bottom-left-radius: @indent__s;
+        border-top-left-radius: @indent__s;
+
+        &:hover {
+            border-bottom-left-radius: @radius__base;
+            border-top-left-radius: @radius__base;
+        }
+
+        &.active {
+            border-bottom-left-radius: @radius__xl;
+            border-top-left-radius: @radius__xl;
+        }
     }
 }

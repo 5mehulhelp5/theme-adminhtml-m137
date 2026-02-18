@@ -107,7 +107,7 @@
         transform: translate(-50%, -16px);
         overflow: hidden;
         width: auto;
-        background: @color-white;        
+        background: @color-white;
         padding: 0.3rem @indent__s;
         border-radius: @radius__base;
         color: @neutral-40;
@@ -133,7 +133,11 @@
 //  _____________________________________________
 
 .pagebuilder-options {
-    height: 5.2rem;
+    height: 4.8rem;
+
+    &.pagebuilder-options-middle { 
+        transform: translate(50%, calc(-50% - @indent__s));
+    }
 
     &.pagebuilder-options-visible {
         opacity: 1;
@@ -141,23 +145,28 @@
     }
 
     .pagebuilder-options-wrapper {
-        border-radius: @radius__xl;
-        border: none;
-        box-shadow: @shadow-level-3;
         background: @color-white;
+        border: none;
+        border-radius: @radius__xl;
+        box-shadow: @shadow-level-3;
 
         .pagebuilder-options-links {
             border-radius: @radius__xl;
             overflow: hidden;
+            padding: @indent__xs;
 
             .pagebuilder-options-link {
                 vertical-align: middle;
 
                 > a {
-                    padding: @indent__base;
+                    align-items: center;
+                    border-radius: @radius__xl;
+                    display: flex;
+                    height: 4rem;
+                    justify-content: center;
+                    padding: @indent__s;
                     transition: @smooth__background-color, @smooth__color;
                     width: 5.2rem;
-                    height: 5.2rem;
 
                     i {
                         font-size: 2rem;
@@ -166,17 +175,23 @@
 
                     &.move-structural,
                     &.move-column {
-                        padding: @indent__base;
+                        align-items: center;
+                        display: flex;
+                        justify-content: center;
+                        padding: @indent__s;
                         width: 5.2rem;
                     }
                 }
 
                 > .option-title {
+                    align-items: center;
+                    display: flex;
                     font-size: @font-size__l;
-                    height: 5.2rem;
-                    line-height: 2rem;
-                    padding: @indent__base;
                     font-weight: @font-weight__heavier;
+                    height: 4rem;
+                    justify-content: center;
+                    line-height: 2rem;
+                    padding: @indent__s;
                 }
             }
         }

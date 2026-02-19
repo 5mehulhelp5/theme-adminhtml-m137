@@ -132,12 +132,17 @@
 //  Options Panel
 //  _____________________________________________
 
+.pagebuilder-row,
+.pagebuilder-content-type-affordance {
+    > .pagebuilder-options {
+        &.pagebuilder-options-middle {
+            transform: translate(50%, calc(-50% - @indent__s));
+        }
+    }
+}
+
 .pagebuilder-options {
     height: 4.8rem;
-
-    &.pagebuilder-options-middle { 
-        transform: translate(50%, calc(-50% - @indent__s));
-    }
 
     &.pagebuilder-options-visible {
         opacity: 1;
@@ -218,7 +223,6 @@
         }
     }
 }
-
 
 .pagebuilder-image-uploader-container {
     overflow: visible;

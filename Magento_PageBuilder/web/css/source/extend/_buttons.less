@@ -11,23 +11,54 @@
 //  Buttons _buttons contains less for generic buttons
 //  _____________________________________________
 
-.page-builder-viewport {
-    background-color: transparent;
-    padding: @button__padding-top @button__large__padding-horizontal @button__padding-bottom @button__large__padding-horizontal;
-    line-height: 0;
-    opacity: 1;
+.viewport-buttons {
+    display: flex;
+    gap: @indent__2xs;
 
-    &[disabled] {
-        background-color: @neutral-90;
-    }
+    .tooltip {
+        .page-builder-viewport {
+            background-color: @neutral-90;
+            border-radius: @radius__s;
+            transition: @smooth__background, @smooth__border-radius;
+            padding: @button__padding-top @button__large__padding-horizontal @button__padding-bottom @button__large__padding-horizontal;
+            line-height: 0;
+            opacity: 1;
 
-    img {
-        height: 2.4rem;
-        width: 2.4rem;
-        filter: invert(8%) sepia(7%) saturate(6%) hue-rotate(314deg) brightness(90%) contrast(73%);
-    }
+            &:hover {
+                background-color: @neutral-80;
+            }
 
-    &.desktop-switcher {
-        margin-right: 0;
+            &[disabled] {
+                background-color: @neutral-50;
+                border-radius: @radius__xl;
+
+                img {
+                    filter: brightness(0) invert(1);
+                }
+            }
+
+            img {
+                height: 2.4rem;
+                width: 2.4rem;
+            }
+
+            &.desktop-switcher {
+                margin-right: 0;
+            }
+        }
+
+        &:first-child {
+            .page-builder-viewport {
+                border-top-left-radius: @radius__xl;
+                border-bottom-left-radius: @radius__xl;
+            }
+        }
+
+        &:last-child {
+            .page-builder-viewport {
+                border-top-right-radius: @radius__xl;
+                border-bottom-right-radius: @radius__xl;
+            }
+        }
     }
 }

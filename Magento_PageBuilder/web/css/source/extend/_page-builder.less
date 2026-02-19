@@ -17,8 +17,9 @@
             width: calc(~'100% - 240px');
 
             .template-buttons {
-                transform: unset;
                 right: @indent__base;
+                display: inline-flex;
+                transform: unset;
 
                 button {
                    &:extend(.abs-action-quaternary all);
@@ -110,6 +111,37 @@
 
             .pagebuilder-stage {
                 width: calc(~'100% - 240px');
+            }
+        }
+    }
+}
+
+//
+//  Stage pagebuilder header tooltip
+//  ---------------------------------------------
+
+.pagebuilder-stage-wrapper {
+    .pagebuilder-header {
+        .tooltip {
+            position: relative;
+
+            .tooltip-content {
+                &:extend(.abs-admin__field-tooltip-content all);
+                box-shadow: @shadow-level-2;
+                color: @text__color;
+                left: 50%;
+                margin-left: unset;
+                margin-top: @indent__xs;
+                transform: translateX(-50%);
+
+                &:before {
+                    display: none;
+                }
+
+                .tooltip-label {
+                    display: inline-block;
+                    margin-bottom: @indent__xs;
+                }
             }
         }
     }

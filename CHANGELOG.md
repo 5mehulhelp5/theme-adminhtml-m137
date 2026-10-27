@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.3.5] - 2026-10-26
+
+### Fixed
+
+- Restore missing radio input styles on legacy admin forms (`_styles-old.less`)
+
 ## [1.3.4] - 2026-02-23
 
 ### Changed
